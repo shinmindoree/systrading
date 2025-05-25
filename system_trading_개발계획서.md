@@ -81,6 +81,11 @@
 
 ## 5. 개발 및 협업 방식
 
+- **브랜치 전략**: 항상 새로운 기능/수정/실험은 별도의 브랜치(feature/기능명, fix/버그명 등)에서 개발하고, 기능이 완성되면 main 브랜치에 merge(병합)한다.
+    - 예시:
+      1. `git checkout -b feature/스크리닝`
+      2. 개발/테스트/커밋 후 `git push origin feature/스크리닝`
+      3. 기능 완성 후 main에 병합: `git checkout main`, `git merge feature/스크리닝`, `git push origin main`
 - **버전 관리**: 모든 코드 변경 시 GitHub에 커밋, 필요시 태그/브랜치 활용
 - **문서화**: 주요 기능별로 README, 주석, 개발일지 작성
 - **테스트**: 각 단계별로 단위 테스트 및 통합 테스트 진행
